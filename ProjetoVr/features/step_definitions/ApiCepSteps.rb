@@ -11,7 +11,7 @@ Então("exibo o código do IBGE.") do
 end
 
 Quando("Realizo um Get na API dos correios com o CEP {string} invalido.") do |cep|
-  @resposta =  HTTparty.get("https://viacep.com.br/ws/#{cep}/json")
+  @resposta =  HTTParty.get("https://viacep.com.br/ws/#{cep}/json")
 end
 
 Então("Valido a mensagem de erro do retorno da API.") do
